@@ -5,28 +5,17 @@ using System;
 
 namespace NetWorthApi.Models
 {
-    public abstract class NWFactor
+    public class NWFactor
     {
-        #region Protected Fields
-        protected long id;
-        protected string name;
-        protected NWFactorValue currentValue;
-        protected bool hasInterest;
-        protected double interestRate;
-        protected int type;
-        #endregion
-
-        #region Public Properties
         public long Id { get; set; }
         public string Name { get; set; }
-        public NWFactorValue CurrentValue { get; set; } //Obviously some value type
+        public double CurrentValue { get; set; } //Obviously some value type
         public bool HasInterest { get; set; }
         public double InterestRate { get; set; } //Maybe a value type
         public int Type { get; set; }  //Maybe an Enum?
-        #endregion
+        public long UserID { get; set; }
 
-        #region Construction
-        public NWFactor(string name, int type, NWFactorValue currVal, double intRate)
+        /*public NWFactor(string name, int type, NWFactorValue currVal, double intRate)
         {
             this.Name = name;
             this.Type = type;
@@ -35,11 +24,9 @@ namespace NetWorthApi.Models
 
             if(intRate != 0)
                 this.HasInterest = true;
-        }
-        #endregion
+        }*/
 
-        #region Public Methods
-        public NWFactorValue CalculateValueByDate(DateTime futureDate)
+        /*public NWFactorValue CalculateValueByDate(DateTime futureDate)
         {
             //Simple implementation
             if(this.HasInterest)
@@ -58,11 +45,8 @@ namespace NetWorthApi.Models
             }
             else
                 return this.CurrentValue;
-        }
-        #endregion
+        }*/
 
-        #region Abstract Methods
-        protected abstract void VerifyInterestRate();
-        #endregion
+        //protected abstract void VerifyInterestRate();
     }
 }
