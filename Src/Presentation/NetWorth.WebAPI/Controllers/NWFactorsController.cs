@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using NetWorth.WebAPI.Models;
+using NetWorth.Domain.Models;
+using NetWorth.Persistence;
 
 namespace NetWorth.WebAPI.Controllers
 {

@@ -13,4 +13,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\NetWorth.Domain\NetWorth.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\NetWorth.Persistence\NetWorth.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

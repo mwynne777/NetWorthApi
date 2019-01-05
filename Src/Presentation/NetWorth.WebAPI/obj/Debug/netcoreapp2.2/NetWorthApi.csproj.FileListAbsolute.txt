@@ -26,3 +26,8 @@
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/obj/Debug/netcoreapp2.2/NetWorthApi.RazorTargetAssemblyInfo.cache
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/obj/Debug/netcoreapp2.2/NetWorthApi.dll
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/obj/Debug/netcoreapp2.2/NetWorthApi.pdb
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/bin/Debug/netcoreapp2.2/NetWorth.Domain.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/bin/Debug/netcoreapp2.2/NetWorth.Persistence.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/bin/Debug/netcoreapp2.2/NetWorth.Domain.pdb
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/bin/Debug/netcoreapp2.2/NetWorth.Persistence.pdb
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/obj/Debug/netcoreapp2.2/NetWorthApi.csproj.CopyComplete

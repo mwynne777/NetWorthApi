@@ -4596,6 +4596,30 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "NetWorth.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/NetWorth.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NetWorth.Domain.dll": {}
+        }
+      },
+      "NetWorth.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite": "2.1.1",
+          "NetWorth.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/NetWorth.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NetWorth.Persistence.dll": {}
+        }
       }
     }
   },
@@ -12099,6 +12123,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "NetWorth.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Core/NetWorth.Domain/NetWorth.Domain.csproj",
+      "msbuildProject": "../../Core/NetWorth.Domain/NetWorth.Domain.csproj"
+    },
+    "NetWorth.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../../Infrastructure/NetWorth.Persistence/NetWorth.Persistence.csproj",
+      "msbuildProject": "../../Infrastructure/NetWorth.Persistence/NetWorth.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12106,7 +12140,9 @@
       "Microsoft.AspNetCore.App >= 2.2.0-preview3-35497",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0-preview3-35497",
       "Microsoft.EntityFrameworkCore.Sqlite >= 2.1.1",
-      "Microsoft.NETCore.App >= 2.2.0-preview3-27014-02"
+      "Microsoft.NETCore.App >= 2.2.0-preview3-27014-02",
+      "NetWorth.Domain >= 1.0.0",
+      "NetWorth.Persistence >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12136,7 +12172,14 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/NetWorth.Domain.csproj": {
+              "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/NetWorth.Domain.csproj"
+            },
+            "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/NetWorth.Persistence.csproj": {
+              "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/NetWorth.Persistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
