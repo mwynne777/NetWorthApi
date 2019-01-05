@@ -1,5 +1,5 @@
 using System;
-using BusinessLogic.Exceptions;
+using NetWorth.WebAPI.BusinessLogic.Exceptions;
 
 namespace NetWorth.WebAPI.BusinessLogic
 {

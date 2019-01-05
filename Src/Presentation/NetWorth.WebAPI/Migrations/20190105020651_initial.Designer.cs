@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NetWorthApi.Models;
+using NetWorth.WebAPI.Models;
 
-namespace NetWorthApi.Migrations
+namespace NetWorth.WebAPI.Migrations
 {
     [DbContext(typeof(NetWorthContext))]
     [Migration("20190105020651_initial")]

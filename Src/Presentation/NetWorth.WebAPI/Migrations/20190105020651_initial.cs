@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NetWorthApi.Migrations
+namespace NetWorth.WebAPI.Migrations
 {
     public partial class initial : Migration
     {

@@ -1,8 +1,8 @@
 using System;
-using NetWorthApi.Models;
-using NetWorthApi.Models.ValueObjects;
-using BusinessLogic;
-using BusinessLogic.Exceptions;
+using NetWorth.WebAPI.Models;
+using NetWorth.WebAPI.Models.ValueObjects;
+using NetWorth.WebAPI.BusinessLogic;
+using NetWorth.WebAPI.BusinessLogic.Exceptions;
 
 namespace NetWorth.WebAPI.Models 
 {

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using NetWorthApi.Models.ValueObjects;
+using NetWorth.WebAPI.Models.ValueObjects;
 
 namespace NetWorth.WebAPI.Models
 {

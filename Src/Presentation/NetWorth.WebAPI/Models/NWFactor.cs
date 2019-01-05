@@ -1,6 +1,6 @@
-using BusinessLogic;
-using BusinessLogic.Exceptions;
-using NetWorthApi.Models.ValueObjects;
+using NetWorth.WebAPI.BusinessLogic;
+using NetWorth.WebAPI.BusinessLogic.Exceptions;
+using NetWorth.WebAPI.Models.ValueObjects;
 using System;
 
 namespace NetWorth.WebAPI.Models

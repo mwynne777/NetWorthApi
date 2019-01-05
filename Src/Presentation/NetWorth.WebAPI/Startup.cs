@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
-using NetWorthApi.Models;
+using NetWorth.WebAPI.Models;
 
 namespace NetWorth.WebAPI
 {
