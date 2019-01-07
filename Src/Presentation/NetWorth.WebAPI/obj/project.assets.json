@@ -12152,9 +12152,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/NetWorthApi.csproj",
-      "projectName": "NetWorthApi",
-      "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/NetWorthApi.csproj",
+      "projectUniqueName": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/NetWorth.WebAPI.csproj",
+      "projectName": "NetWorth.WebAPI",
+      "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/NetWorth.WebAPI.csproj",
       "packagesPath": "/Users/Michael/.nuget/packages/",
       "outputPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/obj/",
       "projectStyle": "PackageReference",

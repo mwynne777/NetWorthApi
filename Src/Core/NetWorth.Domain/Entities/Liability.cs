@@ -1,9 +1,9 @@
 using System;
-using NetWorth.Domain.Models;
+using NetWorth.Domain.Entities;
 using NetWorth.Domain.ValueObjects;
 using NetWorth.Domain.Exceptions;
 
-namespace NetWorth.Domain.Models 
+namespace NetWorth.Domain.Entities 
 {
     public class Liability : NWFactor
     {

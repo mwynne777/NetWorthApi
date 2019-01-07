@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore; 
-using NetWorth.Domain.Models;
+using NetWorth.Domain.Entities;
 
 namespace NetWorth.Persistence {     
     public class NetWorthContext : DbContext     

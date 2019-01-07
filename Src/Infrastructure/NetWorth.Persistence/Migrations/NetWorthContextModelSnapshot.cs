@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NetWorth.Domain.Models;
+using NetWorth.Domain.Entities;
 
 namespace NetWorth.Persistence.Migrations
 {

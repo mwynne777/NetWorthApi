@@ -2,9 +2,9 @@ using NetWorth.Domain.Exceptions;
 using NetWorth.Domain.ValueObjects;
 using System;
 
-namespace NetWorth.Domain.Models
+namespace NetWorth.Domain.Entities
 {
-    public class NWFactor
+    public abstract class NWFactor
     {
         public long Id { get; set; }
         public string Name { get; set; }
