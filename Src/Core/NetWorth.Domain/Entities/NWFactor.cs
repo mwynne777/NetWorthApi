@@ -14,6 +14,9 @@ namespace NetWorth.Domain.Entities
         public int Type { get; set; }  //Maybe an Enum?
         public long UserID { get; set; }
 
+
+        public User User { get; set; }
+
         /*public NWFactor(string name, int type, NWFactorValue currVal, double intRate)
         {
             this.Name = name;

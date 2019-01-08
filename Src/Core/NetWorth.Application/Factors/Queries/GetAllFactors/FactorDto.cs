@@ -19,7 +19,7 @@ namespace NetWorth.Application.Factors.Queries.GetAllFactors
         public void CreateMappings(Profile configuration)
         {
             configuration.CreateMap<NWFactor, FactorDto>()
-                .ForMember(pDTO => pDTO.Name, opt => opt.MapFrom(p =>  p.Name));
+                .ForMember(fDTO => fDTO.UserID, opt => opt.MapFrom(p => p.User != null ? p.User.Id : 0));
         }
     }
 }

@@ -4,6 +4,6 @@ namespace NetWorth.Application.Users.Commands.DeleteUser
 {
     public class DeleteUserCommand : IRequest
     {
-        public string Id { get; set; }
+        public long Id { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace NetWorth.Application.Factors.Queries.GetFactor
             configuration.CreateMap<NWFactor, FactorViewModel>()
                 .ForMember(pDTO => pDTO.EditEnabled, opt => opt.MapFrom<PermissionsResolver>())
                 .ForMember(pDTO => pDTO.DeleteEnabled, opt => opt.MapFrom<PermissionsResolver>())
-                .ForMember(pDTO => pDTO.Name, opt => opt.MapFrom(p => p.Name));
+                .ForMember(fDTO => fDTO.UserID, opt => opt.MapFrom(p => p.User != null ? p.User.Id : 0));
         }
 
         class PermissionsResolver : IValueResolver<NWFactor, FactorViewModel, bool>

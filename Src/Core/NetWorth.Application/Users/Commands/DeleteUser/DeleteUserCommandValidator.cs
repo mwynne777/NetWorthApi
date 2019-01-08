@@ -6,7 +6,7 @@ namespace NetWorth.Application.Users.Commands.DeleteUser
     {
         public DeleteUserCommandValidator()
         {
-            RuleFor(v => v.Id).NotEmpty().Length(5);
+            RuleFor(v => v.Id).GreaterThan(0).NotEmpty();
         }
     }
 }
