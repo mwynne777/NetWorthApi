@@ -4633,7 +4633,7 @@
       },
       "NetWorth.Application/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "AutoMapper": "8.0.0",
           "FluentValidation": "8.1.2",
@@ -4650,7 +4650,7 @@
       },
       "NetWorth.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETCoreApp,Version=v2.2",
         "compile": {
           "bin/placeholder/NetWorth.Domain.dll": {}
         },
@@ -4660,7 +4660,7 @@
       },
       "NetWorth.Persistence/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.1",

@@ -1,0 +1,14 @@
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/bin/Debug/netcoreapp2.2/NetWorth.Persistence.deps.json
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/bin/Debug/netcoreapp2.2/NetWorth.Persistence.runtimeconfig.json
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/bin/Debug/netcoreapp2.2/NetWorth.Persistence.runtimeconfig.dev.json
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/bin/Debug/netcoreapp2.2/NetWorth.Persistence.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/bin/Debug/netcoreapp2.2/NetWorth.Persistence.pdb
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/bin/Debug/netcoreapp2.2/NetWorth.Domain.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/bin/Debug/netcoreapp2.2/NetWorth.Domain.pdb
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/obj/Debug/netcoreapp2.2/NetWorth.Persistence.csprojAssemblyReference.cache
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/obj/Debug/netcoreapp2.2/NetWorth.Persistence.csproj.CoreCompileInputs.cache
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/obj/Debug/netcoreapp2.2/NetWorth.Persistence.AssemblyInfoInputs.cache
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/obj/Debug/netcoreapp2.2/NetWorth.Persistence.AssemblyInfo.cs
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/obj/Debug/netcoreapp2.2/NetWorth.Persistence.csproj.CopyComplete
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/obj/Debug/netcoreapp2.2/NetWorth.Persistence.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Infrastructure/NetWorth.Persistence/obj/Debug/netcoreapp2.2/NetWorth.Persistence.pdb

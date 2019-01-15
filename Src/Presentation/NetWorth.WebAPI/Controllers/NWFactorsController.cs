@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,7 @@ namespace NetWorth.WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<FactorsListViewModel>> GetAll()
         {
+            Console.WriteLine("Getting all factors");
             return Ok(await Mediator.Send(new GetAllFactorsQuery()));
         }
 
