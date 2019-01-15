@@ -1,82 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using NetWorth.Domain.Entities;
-using NetWorth.Persistence;
+using NetWorth.Application.Users.Queries.GetUsersList;
+using NetWorth.Application.Users.Queries.GetUserDetail;
+using NetWorth.Application.Users.Commands.UpdateUser;
+using NetWorth.Application.Users.Commands.CreateUser;
+using NetWorth.Application.Users.Commands.DeleteUser;
+using System.Net;
 
 namespace NetWorth.WebAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : BaseController
     {
-        private readonly NetWorthContext _context;
-
-        public UsersController(NetWorthContext context)
-        {
-            _context = context;
-        }
-
+        // GET api/users
         [HttpGet]
-        public ActionResult<List<User>> GetAll()
+        public async Task<ActionResult<UsersListViewModel>> GetAll()
         {
-            return _context.Users.ToList();
+            return Ok(await Mediator.Send(new GetUsersListQuery()));
         }
 
-        [HttpGet("{id}", Name="GetUser")]
-        public ActionResult<User> GetById(long id)
+        // GET api/users/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<UserDetailModel>> Get(long id)
         {
-            var user = _context.Users.Find(id);
-            if(user == null)
-            {
-                return NotFound();
-            }
-            
-            return user;
+            return Ok(await Mediator.Send(new GetUserDetailQuery { Id = id }));
         }
 
+        // POST api/users
         [HttpPost]
-        public IActionResult Create(User user)
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        public async Task<IActionResult> Create([FromBody]CreateUserCommand command)
         {
-            _context.Users.Add(user);
-            _context.SaveChanges();
+            await Mediator.Send(command);
 
-            return CreatedAtRoute("GetUser", new { id = user.Id }, user);
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult Update(long id, User user)
-        {
-            var result = _context.Users.Find(id);
-            if (result == null)
-            {
-                return NotFound();
-            }
-
-            result.Id = user.Id;
-            result.FirstName = user.FirstName;
-            result.LastName = user.LastName;
-            result.UserName = user.UserName;
-            result.Password = user.Password;
-
-            _context.Users.Update(result);
-            _context.SaveChanges();
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(long id)
+        // PUT api/users/5
+        [HttpPut("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        public async Task<IActionResult> Update(long id, [FromBody]UpdateUserCommand command)
         {
-            var result = _context.Users.Find(id);
-            if (result == null)
-            {
-                return NotFound();
-            }
+            await Mediator.Send(command);
 
-            _context.Users.Remove(result);
-            _context.SaveChanges();
+            return NoContent();
+        }
+
+        // DELETE api/users/5
+        [HttpDelete("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        public async Task<IActionResult> Delete(long id)
+        {
+            await Mediator.Send(new DeleteUserCommand { Id = id });
+
             return NoContent();
         }
     }

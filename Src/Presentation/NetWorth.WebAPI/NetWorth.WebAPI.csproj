@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0-preview3-35497" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
@@ -14,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\NetWorth.Application\NetWorth.Application.csproj" />
     <ProjectReference Include="..\..\Core\NetWorth.Domain\NetWorth.Domain.csproj" />
     <ProjectReference Include="..\..\Infrastructure\NetWorth.Persistence\NetWorth.Persistence.csproj" />
   </ItemGroup>

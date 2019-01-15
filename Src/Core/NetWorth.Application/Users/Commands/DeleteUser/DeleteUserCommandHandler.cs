@@ -27,7 +27,13 @@ namespace NetWorth.Application.Users.Commands.DeleteUser
                 throw new NotFoundException(nameof(User), request.Id);
             }
 
-            var hasNWFactors = _context.Factors.Any(o => o.UserID == entity.Id);
+            var hasNWFactors = _context.Liabilities.Any(o => o.UserID == entity.Id);
+            if (hasNWFactors)
+            {
+                throw new DeleteFailureException(nameof(User), request.Id, "There are existing orders associated with this customer.");
+            }
+
+            hasNWFactors = _context.Assets.Any(o => o.UserID == entity.Id);
             if (hasNWFactors)
             {
                 throw new DeleteFailureException(nameof(User), request.Id, "There are existing orders associated with this customer.");

@@ -23,11 +23,13 @@ namespace NetWorth.Application.Factors.Queries.GetAllFactors
         public async Task<FactorsListViewModel> Handle(GetAllFactorsQuery request, CancellationToken cancellationToken)
         {
             // TODO: Set view model state based on user permissions.
-            var products = await _context.Factors.OrderBy(p => p.Name).ToListAsync(cancellationToken);
+            var assets = await _context.Assets.OrderBy(p => p.Name).ToListAsync(cancellationToken);
+            var liabilities = await _context.Liabilities.OrderBy(p => p.Name).ToListAsync(cancellationToken);
 
             var model = new FactorsListViewModel
             {
-                Products = _mapper.Map<IEnumerable<FactorDto>>(products),
+                Assets = _mapper.Map<IEnumerable<FactorDto>>(assets),
+                Liabilities = _mapper.Map<IEnumerable<FactorDto>>(liabilities),
                 CreateEnabled = true
             };
 

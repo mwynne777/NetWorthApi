@@ -18,7 +18,11 @@ namespace NetWorth.Application.Factors.Commands.UpdateFactor
 
         public async Task<Unit> Handle(UpdateFactorCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.Factors.FindAsync(request.Id);
+            NWFactor entity;
+            if(request.IsAsset)
+                entity = await _context.Assets.FindAsync(request.Id);
+            else
+                entity = await _context.Liabilities.FindAsync(request.Id);
 
             if (entity == null)
             {

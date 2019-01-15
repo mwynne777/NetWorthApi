@@ -17,3 +17,5 @@
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/obj/Debug/netcoreapp2.2/NetWorth.WebAPI.dll
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/obj/Debug/netcoreapp2.2/NetWorth.WebAPI.pdb
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/obj/Debug/netcoreapp2.2/NetWorth.WebAPI.csprojAssemblyReference.cache
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/bin/Debug/netcoreapp2.2/NetWorth.Application.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Presentation/NetWorth.WebAPI/bin/Debug/netcoreapp2.2/NetWorth.Application.pdb

@@ -1,84 +1,55 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using NetWorth.Domain.Entities;
-using NetWorth.Persistence;
+using NetWorth.Application.Factors.Commands.CreateFactor;
+using NetWorth.Application.Factors.Commands.DeleteFactor;
+using NetWorth.Application.Factors.Commands.UpdateFactor;
+using NetWorth.Application.Factors.Queries.GetAllFactors;
+using NetWorth.Application.Factors.Queries.GetFactor;
 
 namespace NetWorth.WebAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class NWFactorsController : ControllerBase
+    public class FactorsController : BaseController
     {
-        private readonly NetWorthContext _context;
-
-        public NWFactorsController(NetWorthContext context)
-        {
-            _context = context;
-        }
-
+        // GET: api/factors
         [HttpGet]
-        public ActionResult<List<NWFactor>> GetAll()
+        public async Task<ActionResult<FactorsListViewModel>> GetAll()
         {
-            return _context.Factors.ToList();
+            return Ok(await Mediator.Send(new GetAllFactorsQuery()));
         }
 
-        [HttpGet("{id}", Name="GetNWFactor")]
-        public ActionResult<NWFactor> GetById(long id)
+        // GET: api/factors/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<FactorViewModel>> Get(long id)
         {
-            var factor = _context.Factors.Find(id);
-            if(factor == null)
-            {
-                return NotFound();
-            }
-            
-            return factor;
+            return Ok(await Mediator.Send(new GetFactorQuery { Id = id}));
         }
 
+        // POST: api/factors
         [HttpPost]
-        public IActionResult Create(NWFactor factor)
+        public async Task<ActionResult<long>> Create([FromBody] CreateFactorCommand command)
         {
-            _context.Factors.Add(factor);
-            _context.SaveChanges();
+            var productId = await Mediator.Send(command);
 
-            return CreatedAtRoute("GetNWFactor", new { id = factor.Id }, factor);
+            return Ok(productId);
         }
 
+        // PUT: api/factors/5
         [HttpPut("{id}")]
-        public IActionResult Update(long id, NWFactor factor)
+        public async Task<ActionResult<FactorDto>> Update(
+            [FromRoute] long id,
+            [FromBody] UpdateFactorCommand command)
         {
-            var result = _context.Factors.Find(id);
-            if (result == null)
-            {
-                return NotFound();
-            }
-
-            result.Id = factor.Id;
-            result.Name = factor.Name;
-            result.CurrentValue = factor.CurrentValue;
-            result.HasInterest = factor.HasInterest;
-            result.InterestRate = factor.InterestRate;
-            result.Type = factor.Type;
-            result.UserID = factor.UserID;
-
-            _context.Factors.Update(result);
-            _context.SaveChanges();
-            return NoContent();
+            return Ok(await Mediator.Send(command));
         }
 
+        // DELETE: api/factors/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(long id)
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        public async Task<IActionResult> Delete(long id)
         {
-            var result = _context.Factors.Find(id);
-            if (result == null)
-            {
-                return NotFound();
-            }
+            await Mediator.Send(new DeleteFactorCommand { Id = id });
 
-            _context.Factors.Remove(result);
-            _context.SaveChanges();
             return NoContent();
         }
     }

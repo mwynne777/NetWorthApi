@@ -19,20 +19,21 @@ namespace NetWorth.Application.Factors.Commands.DeleteFactor
 
         public async Task<Unit> Handle(DeleteFactorCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.Factors.FindAsync(request.Id);
+            NWFactor entity;
+            if(request.IsAsset)
+                entity = await _context.Assets.FindAsync(request.Id);
+            else
+                entity = await _context.Liabilities.FindAsync(request.Id);
 
             if (entity == null)
             {
-                throw new NotFoundException(nameof(Factors), request.Id);
+                throw new NotFoundException(nameof(NWFactor), request.Id);
             }
 
-            var hasOrders = _context.Factors.Any(od => od.Id == entity.Id);
-            if (hasOrders)
-            {
-                throw new DeleteFailureException(nameof(NWFactor), request.Id, "There are existing orders associated with this product.");
-            }
-
-            _context.Factors.Remove(entity);
+            if(request.IsAsset)
+                _context.Assets.Remove((Asset)entity);
+            else
+                _context.Liabilities.Remove((Liability)entity);
 
             await _context.SaveChangesAsync(cancellationToken);
 
