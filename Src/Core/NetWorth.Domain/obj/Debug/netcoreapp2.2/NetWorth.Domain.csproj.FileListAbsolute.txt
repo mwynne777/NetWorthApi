@@ -1,9 +1,0 @@
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/bin/Debug/netcoreapp2.2/NetWorth.Domain.deps.json
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/bin/Debug/netcoreapp2.2/NetWorth.Domain.dll
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/bin/Debug/netcoreapp2.2/NetWorth.Domain.pdb
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/obj/Debug/netcoreapp2.2/NetWorth.Domain.csprojAssemblyReference.cache
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/obj/Debug/netcoreapp2.2/NetWorth.Domain.csproj.CoreCompileInputs.cache
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/obj/Debug/netcoreapp2.2/NetWorth.Domain.AssemblyInfoInputs.cache
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/obj/Debug/netcoreapp2.2/NetWorth.Domain.AssemblyInfo.cs
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/obj/Debug/netcoreapp2.2/NetWorth.Domain.dll
-/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/Core/NetWorth.Domain/obj/Debug/netcoreapp2.2/NetWorth.Domain.pdb
