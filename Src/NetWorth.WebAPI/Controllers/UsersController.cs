@@ -16,7 +16,6 @@ namespace NetWorth.WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<UsersListViewModel>> GetAll()
         {
-            System.Diagnostics.Debug.WriteLine("Get all users");
             return Ok(await Mediator.Send(new GetUsersListQuery()));
         }
 

@@ -19,5 +19,19 @@ namespace NetWorth.Domain.Entities
 
         public ICollection<Asset> Assets { get; private set;}
         public ICollection<Liability> Liabilities { get; private set; }
+
+        public double GetNetWorth()
+        {
+            double netWorth = 0.0;
+            foreach(Asset a in Assets)
+            {
+                netWorth += a.CurrentValue;
+            }
+            foreach(Liability l in Liabilities)
+            {
+                netWorth -= l.CurrentValue;
+            }
+            return netWorth;
+        }
     }
 }

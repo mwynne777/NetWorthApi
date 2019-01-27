@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
+using NetWorth.Application.Factors.Queries.GetAllFactors;
 using NetWorth.Domain.Entities;
 
 namespace NetWorth.Application.Users.Queries.GetUserDetail
@@ -9,20 +11,19 @@ namespace NetWorth.Application.Users.Queries.GetUserDetail
         public long Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public double NetWorth {get; set; }
+        public IEnumerable<FactorDto> Assets { get; set; } 
+        public IEnumerable<FactorDto> Liabilities { get; set; }
 
         public static Expression<Func<User, UserDetailModel>> Projection
         {
             get
             {
-                return customer => new UserDetailModel
+                return user => new UserDetailModel
                 {
-                    Id = customer.Id,
-                    FirstName = customer.FirstName,
-                    LastName = customer.LastName,
-                    UserName = customer.UserName,
-                    Password = customer.Password,
+                    Id = user.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName
                 };
             }
         }

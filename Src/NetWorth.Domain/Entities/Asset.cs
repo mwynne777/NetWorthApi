@@ -1,7 +1,7 @@
 using System;
 using NetWorth.Domain.Entities;
 using NetWorth.Domain.ValueObjects;
-using NetWorth.Domain.Exceptions;
+//using NetWorth.Domain.Exceptions;
 
 namespace NetWorth.Domain.Entities 
 {

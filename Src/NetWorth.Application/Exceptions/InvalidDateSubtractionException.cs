@@ -1,6 +1,6 @@
 using System;
 
-namespace NetWorth.Domain.Exceptions
+namespace NetWorth.Application.Exceptions
 {
     public class InvalidDateSubtractionException : Exception
     {

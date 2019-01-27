@@ -1,4 +1,4 @@
-using NetWorth.Domain.Exceptions;
+//using NetWorth.Domain.Exceptions;
 using NetWorth.Domain.ValueObjects;
 using System;
 
@@ -13,7 +13,6 @@ namespace NetWorth.Domain.Entities
         public double InterestRate { get; set; } //Maybe a value type
         public int Type { get; set; }  //Maybe an Enum?
         public long UserID { get; set; }
-
 
         public User User { get; set; }
 
