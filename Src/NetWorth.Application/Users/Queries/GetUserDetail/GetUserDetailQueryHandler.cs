@@ -36,23 +36,12 @@ namespace NetWorth.Application.Users.Queries.GetUserDetail
             var assets = await _context.Assets.Where(a => a.UserID == request.Id).ToListAsync();
             var liabilities = await _context.Liabilities.Where(l => l.UserID == request.Id).ToListAsync();
 
-            //User user = new User();
             foreach(Asset a in assets)
                 entity.Assets.Add(a);
             foreach(Liability l in liabilities)
                 entity.Liabilities.Add(l);
-                
-            return _mapper.Map<UserDetailModel>(entity);
 
-            /*return new UserDetailModel
-            {
-                Id = entity.Id,
-                FirstName = entity.FirstName,
-                LastName = entity.LastName,
-                NetWorth = user.GetNetWorth(),
-                Assets = _mapper.Map<IEnumerable<FactorDto>>(assets),
-                Liabilities = _mapper.Map<IEnumerable<FactorDto>>(liabilities)
-            };*/
+            return _mapper.Map<UserDetailModel>(entity);
         }
     }
 }
