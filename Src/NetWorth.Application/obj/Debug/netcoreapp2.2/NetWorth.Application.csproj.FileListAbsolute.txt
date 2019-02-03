@@ -26,3 +26,5 @@
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Application/obj/Debug/netcoreapp2.2/NetWorth.Application.csproj.CopyComplete
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Application/obj/Debug/netcoreapp2.2/NetWorth.Application.dll
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Application/obj/Debug/netcoreapp2.2/NetWorth.Application.pdb
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Application/bin/Debug/netcoreapp2.2/NetWorth.Common.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Application/bin/Debug/netcoreapp2.2/NetWorth.Common.pdb

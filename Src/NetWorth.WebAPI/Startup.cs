@@ -22,6 +22,7 @@ using NetWorth.Application.Infrastructure;
 using NetWorth.Application.Infrastructure.AutoMapper;
 using NetWorth.Application.Interfaces;
 using NetWorth.Application.Factors.Queries.GetFactor;
+using NetWorth.Common;
 using NetWorth.Infrastructure;
 using NetWorth.WebAPI.Filters;
 using System.Reflection;
@@ -43,6 +44,7 @@ namespace NetWorth.WebAPI
             services.AddAutoMapper(new Assembly[] { typeof(AutoMapperProfile).GetTypeInfo().Assembly });
 
             services.AddTransient<INotificationService, NotificationService>();
+            services.AddTransient<IDateTime, MachineDateTime>();
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPreProcessorBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPerformanceBehaviour<,>));
@@ -52,10 +54,6 @@ namespace NetWorth.WebAPI
             services.AddDbContext<NetWorthContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("NetWorthDatabase"),
                 x => x.MigrationsAssembly("NetWorth.Persistence")));
-
-            /*services.AddDbContext<NetWorthContext>(opt => 
-                opt.UseSqlite("Data Source=NetWorth.db"));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);*/
 
             services
                 .AddMvc(options => options.Filters.Add(typeof(CustomExceptionFilterAttribute)))

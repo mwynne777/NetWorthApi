@@ -4677,6 +4677,7 @@
           "AutoMapper": "8.0.0",
           "FluentValidation": "8.1.2",
           "MediatR": "6.0.0",
+          "NetWorth.Common": "1.0.0",
           "NetWorth.Domain": "1.0.0",
           "NetWorth.Persistence": "1.0.0"
         },
@@ -4685,6 +4686,16 @@
         },
         "runtime": {
           "bin/placeholder/NetWorth.Application.dll": {}
+        }
+      },
+      "NetWorth.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/NetWorth.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NetWorth.Common.dll": {}
         }
       },
       "NetWorth.Domain/1.0.0": {
@@ -4701,7 +4712,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "NetWorth.Application": "1.0.0"
+          "NetWorth.Application": "1.0.0",
+          "NetWorth.Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/NetWorth.Infrastructure.dll": {}
@@ -12317,6 +12329,11 @@
       "path": "../NetWorth.Application/NetWorth.Application.csproj",
       "msbuildProject": "../NetWorth.Application/NetWorth.Application.csproj"
     },
+    "NetWorth.Common/1.0.0": {
+      "type": "project",
+      "path": "../NetWorth.Common/NetWorth.Common.csproj",
+      "msbuildProject": "../NetWorth.Common/NetWorth.Common.csproj"
+    },
     "NetWorth.Domain/1.0.0": {
       "type": "project",
       "path": "../NetWorth.Domain/NetWorth.Domain.csproj",
@@ -12343,6 +12360,7 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 2.1.1",
       "Microsoft.NETCore.App >= 2.2.0-preview3-27014-02",
       "NetWorth.Application >= 1.0.0",
+      "NetWorth.Common >= 1.0.0",
       "NetWorth.Domain >= 1.0.0",
       "NetWorth.Infrastructure >= 1.0.0",
       "NetWorth.Persistence >= 1.0.0"
@@ -12378,6 +12396,9 @@
           "projectReferences": {
             "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Application/NetWorth.Application.csproj": {
               "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Application/NetWorth.Application.csproj"
+            },
+            "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/NetWorth.Common.csproj": {
+              "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/NetWorth.Common.csproj"
             },
             "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Domain/NetWorth.Domain.csproj": {
               "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Domain/NetWorth.Domain.csproj"

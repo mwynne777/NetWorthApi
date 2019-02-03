@@ -32,6 +32,7 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.1",
           "Microsoft.NETCore.App": "2.2.0-preview3-27014-02",
           "NetWorth.Application": "1.0.0",
+          "NetWorth.Common": "1.0.0",
           "NetWorth.Domain": "1.0.0",
           "NetWorth.Infrastructure": "1.0.0",
           "NetWorth.Persistence": "1.0.0"
@@ -811,6 +812,7 @@
           "AutoMapper": "8.0.0",
           "FluentValidation": "8.1.2",
           "MediatR": "6.0.0",
+          "NetWorth.Common": "1.0.0",
           "NetWorth.Domain": "1.0.0",
           "NetWorth.Persistence": "1.0.0"
         },
@@ -819,6 +821,14 @@
         },
         "compile": {
           "NetWorth.Application.dll": {}
+        }
+      },
+      "NetWorth.Common/1.0.0": {
+        "runtime": {
+          "NetWorth.Common.dll": {}
+        },
+        "compile": {
+          "NetWorth.Common.dll": {}
         }
       },
       "NetWorth.Domain/1.0.0": {
@@ -831,7 +841,8 @@
       },
       "NetWorth.Infrastructure/1.0.0": {
         "dependencies": {
-          "NetWorth.Application": "1.0.0"
+          "NetWorth.Application": "1.0.0",
+          "NetWorth.Common": "1.0.0"
         },
         "runtime": {
           "NetWorth.Infrastructure.dll": {}
@@ -3971,6 +3982,11 @@
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
     "NetWorth.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetWorth.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1050,6 +1050,16 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "NetWorth.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/NetWorth.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NetWorth.Common.dll": {}
+        }
+      },
       "NetWorth.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -3669,6 +3679,11 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "NetWorth.Common/1.0.0": {
+      "type": "project",
+      "path": "../NetWorth.Common/NetWorth.Common.csproj",
+      "msbuildProject": "../NetWorth.Common/NetWorth.Common.csproj"
+    },
     "NetWorth.Domain/1.0.0": {
       "type": "project",
       "path": "../NetWorth.Domain/NetWorth.Domain.csproj",
@@ -3686,6 +3701,7 @@
       "FluentValidation >= 8.1.2",
       "MediatR >= 6.0.0",
       "Microsoft.NETCore.App >= 2.2.0-preview3-27014-02",
+      "NetWorth.Common >= 1.0.0",
       "NetWorth.Domain >= 1.0.0",
       "NetWorth.Persistence >= 1.0.0"
     ]
@@ -3718,6 +3734,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/NetWorth.Common.csproj": {
+              "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/NetWorth.Common.csproj"
+            },
             "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Domain/NetWorth.Domain.csproj": {
               "projectPath": "/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Domain/NetWorth.Domain.csproj"
             },

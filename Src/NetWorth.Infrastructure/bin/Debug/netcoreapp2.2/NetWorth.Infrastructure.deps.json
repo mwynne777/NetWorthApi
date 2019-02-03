@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v2.2": {
       "NetWorth.Infrastructure/1.0.0": {
         "dependencies": {
-          "NetWorth.Application": "1.0.0"
+          "NetWorth.Application": "1.0.0",
+          "NetWorth.Common": "1.0.0"
         },
         "runtime": {
           "NetWorth.Infrastructure.dll": {}
@@ -626,11 +627,17 @@
           "AutoMapper": "8.0.0",
           "FluentValidation": "8.1.2",
           "MediatR": "6.0.0",
+          "NetWorth.Common": "1.0.0",
           "NetWorth.Domain": "1.0.0",
           "NetWorth.Persistence": "1.0.0"
         },
         "runtime": {
           "NetWorth.Application.dll": {}
+        }
+      },
+      "NetWorth.Common/1.0.0": {
+        "runtime": {
+          "NetWorth.Common.dll": {}
         }
       },
       "NetWorth.Domain/1.0.0": {
@@ -1108,6 +1115,11 @@
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
     "NetWorth.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetWorth.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

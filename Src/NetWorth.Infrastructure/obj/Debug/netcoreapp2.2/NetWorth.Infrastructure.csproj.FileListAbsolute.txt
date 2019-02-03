@@ -14,3 +14,5 @@
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Infrastructure/obj/Debug/netcoreapp2.2/NetWorth.Infrastructure.csproj.CopyComplete
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Infrastructure/obj/Debug/netcoreapp2.2/NetWorth.Infrastructure.dll
 /Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Infrastructure/obj/Debug/netcoreapp2.2/NetWorth.Infrastructure.pdb
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Infrastructure/bin/Debug/netcoreapp2.2/NetWorth.Common.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Infrastructure/bin/Debug/netcoreapp2.2/NetWorth.Common.pdb

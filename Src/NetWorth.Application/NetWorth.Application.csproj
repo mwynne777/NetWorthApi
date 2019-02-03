@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NetWorth.Domain\NetWorth.Domain.csproj" />
     <ProjectReference Include="..\NetWorth.Persistence\NetWorth.Persistence.csproj" />
+    <ProjectReference Include="..\NetWorth.Common\NetWorth.Common.csproj" />
   </ItemGroup>
 
 </Project>

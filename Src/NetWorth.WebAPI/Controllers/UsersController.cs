@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using NetWorth.Application.Users.Queries.GetNetWorth;
 using NetWorth.Application.Users.Queries.GetUsersList;
 using NetWorth.Application.Users.Queries.GetUserDetail;
 using NetWorth.Application.Users.Commands.UpdateUser;
@@ -24,6 +25,12 @@ namespace NetWorth.WebAPI.Controllers
         public async Task<ActionResult<UserDetailModel>> Get(long id)
         {
             return Ok(await Mediator.Send(new GetUserDetailQuery { Id = id }));
+        }
+
+        [HttpGet("{id}/{date}")]
+        public async Task<ActionResult<double>> GetNetWorth(long id, DateTime date)
+        {
+            return Ok(await Mediator.Send(new GetNetWorthQuery {Id = id, FutureDate = date}));
         }
 
         // POST api/users

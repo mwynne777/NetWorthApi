@@ -1,0 +1,9 @@
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/bin/Debug/netcoreapp2.2/NetWorth.Common.deps.json
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/bin/Debug/netcoreapp2.2/NetWorth.Common.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/bin/Debug/netcoreapp2.2/NetWorth.Common.pdb
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/obj/Debug/netcoreapp2.2/NetWorth.Common.csprojAssemblyReference.cache
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/obj/Debug/netcoreapp2.2/NetWorth.Common.csproj.CoreCompileInputs.cache
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/obj/Debug/netcoreapp2.2/NetWorth.Common.AssemblyInfoInputs.cache
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/obj/Debug/netcoreapp2.2/NetWorth.Common.AssemblyInfo.cs
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/obj/Debug/netcoreapp2.2/NetWorth.Common.dll
+/Users/Michael/Documents/appDev/dotNET Core/tutorials/NetWorthApi/Src/NetWorth.Common/obj/Debug/netcoreapp2.2/NetWorth.Common.pdb

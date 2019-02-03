@@ -1,7 +1,7 @@
 using System;
-using NetWorth.Application.Exceptions;
+using NetWorth.Domain.Exceptions;
 
-namespace NetWorth.Application.BusinessLogic
+namespace NetWorth.Domain.Calculations
 {
     public class DateCalculations
     {
@@ -10,7 +10,7 @@ namespace NetWorth.Application.BusinessLogic
             if(date1 > date2)
                 throw new InvalidDateSubtractionException();
 
-            return ((date1.Year - date2.Year) * 12) + date1.Month - date2.Month;
+            return ((date2.Year - date1.Year) * 12) + date2.Month - date1.Month;
         }
     }
 }
