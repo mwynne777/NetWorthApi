@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/NetWorthApi.csproj"
+                "${workspaceFolder}/Src/NetWorth.WebAPI/NetWorth.WebAPI.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

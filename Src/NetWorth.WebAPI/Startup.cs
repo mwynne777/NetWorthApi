@@ -54,6 +54,13 @@ namespace NetWorth.WebAPI
             services.AddDbContext<NetWorthContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("NetWorthDatabase"),
                 x => x.MigrationsAssembly("NetWorth.Persistence")));
+                
+
+            //This is annoying, but use this line instead when debugging
+            /*services.AddDbContext<NetWorthContext>(options =>
+                options.UseSqlite("Data Source=NetWorth.db",
+                x => x.MigrationsAssembly("NetWorth.Persistence")));*/
+             
 
             services
                 .AddMvc(options => options.Filters.Add(typeof(CustomExceptionFilterAttribute)))

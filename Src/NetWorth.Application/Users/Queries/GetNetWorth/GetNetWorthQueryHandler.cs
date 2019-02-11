@@ -14,7 +14,7 @@ using NetWorth.Persistence;
 
 namespace NetWorth.Application.Users.Queries.GetNetWorth
 {
-    public class GetNetWorthQueryHandler : IRequestHandler<GetNetWorthQuery, double>
+    public class GetNetWorthQueryHandler : IRequestHandler<GetNetWorthQuery, NetWorthDetailModel>
     {
         private readonly NetWorthContext _context;
         private readonly IMapper _mapper;
@@ -27,12 +27,16 @@ namespace NetWorth.Application.Users.Queries.GetNetWorth
             _dateTime = dateTime;
         }
 
-        public async Task<double> Handle(GetNetWorthQuery request, CancellationToken cancellationToken)
+        public async Task<NetWorthDetailModel> Handle(GetNetWorthQuery request, CancellationToken cancellationToken)
         {
             
             User entity = await BuildUser.BuildFromContext(_context, request.Id);
 
-            return entity.GetFutureNetWorth(_dateTime.Now, request.FutureDate);
+            return new NetWorthDetailModel
+            {
+                UserID = request.Id,
+                DateToNetWorthDict = entity.GetFutureNetWorthByMonth(_dateTime.Now, request.FutureDate)
+            };
         }
     }
 }

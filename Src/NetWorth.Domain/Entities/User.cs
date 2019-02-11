@@ -54,5 +54,33 @@ namespace NetWorth.Domain.Entities
             }
             return futureNetWorth;
         }
+
+        public Dictionary<DateTime,double> GetFutureNetWorthByMonth(DateTime currentDate, DateTime futureDate)
+        {
+            Dictionary<DateTime,double> netWorthDict = new Dictionary<DateTime,double>();
+            List<DateTime> dates = DateCalculations.GetAllMonthsBetweenTwoDates(currentDate, futureDate);
+
+            Asset[] assetsClone = new Asset[Assets.Count];
+            Assets.CopyTo(assetsClone, 0);
+            Liability[] liabilitiesClone = new Liability[Liabilities.Count];
+            Liabilities.CopyTo(liabilitiesClone, 0);
+
+            for(int i = 0; i < dates.Count; i++)
+            {
+                double futureNetWorth = 0;
+                foreach(Asset a in assetsClone)
+                {
+                    futureNetWorth += (a.CurrentValue += Math.Abs(a.CurrentValue) * ((a.InterestRate / 12.0) / 100.0));
+                }
+
+                foreach(Liability l in liabilitiesClone)
+                {
+                    futureNetWorth -= (l.CurrentValue += Math.Abs(l.CurrentValue) * ((l.InterestRate / 12.0) / 100.0));
+                }
+                netWorthDict.Add(dates[i], futureNetWorth);
+            }
+
+            return netWorthDict;
+        }
     }
 }
