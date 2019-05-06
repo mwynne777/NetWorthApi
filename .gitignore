@@ -1,0 +1,6 @@
+*.db
+
+#Visual Studio Code
+.vscode/
+
+*.obj
