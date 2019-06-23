@@ -4,7 +4,7 @@ using System;
 
 namespace NetWorth.Domain.Entities
 {
-    public abstract class NWFactor
+    public class NWFactor
     {
         public long Id { get; set; }
         public string Name { get; set; }

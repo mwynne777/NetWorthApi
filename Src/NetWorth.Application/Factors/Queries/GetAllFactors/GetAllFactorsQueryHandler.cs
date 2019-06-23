@@ -7,6 +7,7 @@ using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using NetWorth.Persistence;
+using NetWorth.Domain.Entities;
 
 namespace NetWorth.Application.Factors.Queries.GetAllFactors
 {
@@ -24,10 +25,8 @@ namespace NetWorth.Application.Factors.Queries.GetAllFactors
         public async Task<FactorsListViewModel> Handle(GetAllFactorsQuery request, CancellationToken cancellationToken)
         {
             // TODO: Set view model state based on user permissions.
-            var assets = await _context.Assets.OrderBy(p => p.Name).ToListAsync(cancellationToken);
-            var liabilities = await _context.Liabilities.OrderBy(p => p.Name).ToListAsync(cancellationToken);
-
-            Console.WriteLine("Showing assets.length: " + assets.Count());
+            var assets = await _context.Factors.OfType<Asset>().OrderBy(p => p.Name).ToListAsync(cancellationToken);
+            var liabilities = await _context.Factors.OfType<Liability>().OrderBy(p => p.Name).ToListAsync(cancellationToken);
 
             var model = new FactorsListViewModel
             {

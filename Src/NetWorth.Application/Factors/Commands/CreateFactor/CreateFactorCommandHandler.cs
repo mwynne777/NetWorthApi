@@ -30,7 +30,7 @@ namespace NetWorth.Application.Factors.Commands.CreateFactor
                     Type = request.Type,
                     UserID = request.UserID
                 };
-                _context.Assets.Add((Asset)entity);
+                _context.Factors.Add((Asset)entity);
             }
             else
             {
@@ -44,7 +44,7 @@ namespace NetWorth.Application.Factors.Commands.CreateFactor
                     Type = request.Type,
                     UserID = request.UserID
                 };
-                _context.Liabilities.Add((Liability)entity);
+                _context.Factors.Add((Liability)entity);
             }
 
             await _context.SaveChangesAsync(cancellationToken);

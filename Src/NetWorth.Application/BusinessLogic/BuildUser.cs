@@ -19,8 +19,8 @@ namespace NetWorth.Application.BusinessLogic
                 throw new NotFoundException(nameof(User), userID);
             }
 
-            var assets = await context.Assets.Where(a => a.UserID == userID).ToListAsync();
-            var liabilities = await context.Liabilities.Where(l => l.UserID == userID).ToListAsync();
+            var assets = await context.Factors.OfType<Asset>().Where(a => a.UserID == userID).ToListAsync();
+            var liabilities = await context.Factors.OfType<Liability>().Where(l => l.UserID == userID).ToListAsync();
 
             foreach(Asset a in assets)
                 entity.Assets.Add(a);

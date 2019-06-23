@@ -29,9 +29,9 @@ namespace NetWorth.Persistence
 
             SeedUsers(context);
 
-            SeedAssets(context);
+            SeedFactors(context);
 
-            SeedLiabilities(context);
+            SeedContributions(context);
         }
 
         public void SeedUsers(NetWorthContext context)
@@ -53,9 +53,9 @@ namespace NetWorth.Persistence
             context.SaveChanges();
         }
 
-        public void SeedAssets(NetWorthContext context)
+        public void SeedFactors(NetWorthContext context)
         {
-            var assets = new[]
+            var factors = new NWFactor[]
             {
                 new Asset
                 {
@@ -66,20 +66,10 @@ namespace NetWorth.Persistence
                     InterestRate = 1.98,
                     Type = 1,
                     UserID = 1
-                }
-            };
-            context.Assets.AddRange(assets);
-
-            context.SaveChanges();
-        }
-
-        public void SeedLiabilities(NetWorthContext context)
-        {
-            var liabilities = new[]
-            {
+                },
                 new Liability
                 {
-                    Id = 1,
+                    Id = 2,
                     Name = "Student Loan",
                     CurrentValue = 20000,
                     HasInterest = true,
@@ -88,11 +78,34 @@ namespace NetWorth.Persistence
                     UserID = 1
                 }
             };
-
-            context.Liabilities.AddRange(liabilities);
+            context.Factors.AddRange(factors);
 
             context.SaveChanges();
         }
 
+        public void SeedContributions(NetWorthContext context)
+        {
+            var contributions = new[]
+            {
+                new Contribution
+                {
+                    Id = 1,
+                    Name = "SavingsAccountContribution",
+                    Amount = 1000.0,
+                    FactorID = 1
+                },
+                new Contribution
+                {
+                    Id = 2,
+                    Name = "StudentLoanPayment",
+                    Amount = 1500.0,
+                    FactorID = 2
+                }
+            };
+
+            context.Contributions.AddRange(contributions);
+
+            context.SaveChanges();
+        }
     }
 }

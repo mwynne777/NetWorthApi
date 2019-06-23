@@ -10,10 +10,14 @@ namespace NetWorth.Persistence {
         {         
         }       
         public DbSet<User> Users { get; set; }   
-        public DbSet<Liability> Liabilities { get; set; }
-        public DbSet<Asset> Assets { get; set; }
+        public DbSet<NWFactor> Factors { get; set; }
+        public DbSet<Contribution> Contributions { get; set; }
+        //public DbSet<Liability> Liabilities { get; set; }
+        //public DbSet<Asset> Assets { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Asset>();
+            modelBuilder.Entity<Liability>();
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(NetWorthContext).Assembly);
         }
    } 

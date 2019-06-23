@@ -23,23 +23,12 @@ namespace NetWorth.Application.Factors.Queries.GetFactor
         public async Task<FactorViewModel> Handle(GetFactorQuery request, CancellationToken cancellationToken)
         {
             var factor = _mapper.Map<FactorViewModel>(await _context
-                .Liabilities.Where(p => p.Id == request.Id)
+                .Factors.Where(p => p.Id == request.Id)
                 .SingleOrDefaultAsync(cancellationToken));
 
             if (factor == null)
             {
                 throw new NotFoundException(nameof(NWFactor), request.Id);
-            }
-            if(factor == null)
-            {
-                factor = _mapper.Map<FactorViewModel>(await _context
-                    .Assets.Where(p => p.Id == request.Id)
-                    .SingleOrDefaultAsync(cancellationToken));
-
-                if (factor == null)
-                {
-                    throw new NotFoundException(nameof(NWFactor), request.Id);
-                }
             }
 
             // TODO: Set view model state based on user permissions.
